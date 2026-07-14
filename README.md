@@ -74,7 +74,7 @@ python analise_exploratoria.py
 ---
 
 ## 🛠️ Tecnologias Utilizadas
-* **Python 3.x**
+* **Python 3.14**
 * **Pandas:** Ingestão orientada a chunks, manipulação matricial, tratamento de nulos e agregações complexas.
 * **Matplotlib:** Engenharia de gráficos e renderização de matrizes visuais de distribuição (Histogramas) e frequência (Barras com data labels).
 
