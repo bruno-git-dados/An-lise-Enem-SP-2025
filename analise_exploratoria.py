@@ -24,7 +24,9 @@ ax1.set_title('Top 10 Municípios Paulistas com Maior Quantidade de Inscritos no
 ax1.set_xlabel('Quantidade de Candidatos')
 ax1.set_ylabel('Município')
 
-
+print("\n=== TOP 10 MUNICÍPIOS DE SP COM MAIOR VOLUME DE INSCRITOS NO ENEM 2025 ===")
+print(df['NO_MUNICIPIO_PROVA'].value_counts().nlargest(10))
+print("\n")
 
 # ANÁLISE 2: DISTRIBUIÇÃO E MÉTRICAS DA PROVA DE REDAÇÃO
 # Avaliação de dispersão e assimetria das notas
@@ -43,7 +45,7 @@ subset_redacao = df[(mask1) & (mask2)]
 # Sumário descritivo e medidas de tendência central
 print("=== ANÁLISE ESTATÍSTICA DAS NOTAS DE REDAÇÃO (EXCLUINDO ZERADAS) ===")
 print(subset_redacao.NU_NOTA_REDACAO.agg(['min', 'mean', 'median', 'max']).round(2))
-print("===================================================================\n")
+print("\n")
 
 
 
@@ -75,7 +77,7 @@ plt.xticks(rotation=45, ha='right')
 # Console output para auditoria do ranking ponderado
 print("=== TOP 10 MUNICÍPIOS DE SP COM AS MAIORES MÉDIAS NO ENEM 2025 ===")
 print(df[df['NO_MUNICIPIO_PROVA'].isin(municipios_filtrados)].groupby('NO_MUNICIPIO_PROVA')['NOTA_GERAL'].mean().nlargest(10).round(2))
-print("=================================================================\n")
+print("\n")
 
 
 
